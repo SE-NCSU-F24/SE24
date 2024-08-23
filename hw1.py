@@ -1,5 +1,8 @@
-def hello_world_repeat(x):
-    for i in range(x):
-        print("Hello World")
+def plus_two(x):
+    return x + 2
 
-hello_world_repeat(x)
+def minus_two(x):
+    return x - 2
+
+print(plus_two(3))
+print(minus_two(3))
