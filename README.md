@@ -2,4 +2,3 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 [![Pytest](https://github.com/SE-NCSU-F24/SE24/actions/workflows/python-app.yml/badge.svg)](https://github.com/SE-NCSU-F24/SE24/actions/workflows/python-app.yml)
-[![cov](https://SE-NCSU-F24.github.io/SE24/badges/coverage.svg)](https:/SE-NCSU-F24/github.com//SE24/actions)
