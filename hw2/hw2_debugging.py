@@ -5,7 +5,7 @@ Functions:
     - merge_sort(arr)
     - recombine(left_arr, right_arr)
 """
-import rand
+from hw2 import rand
 
 
 def merge_sort(arr):
