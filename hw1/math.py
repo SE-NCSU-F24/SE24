@@ -14,7 +14,7 @@ def minus_two(x):
     """
     A function to subtract 2 from our parameter
     """
-    return x - 1
+    return x - 2
 
 
 print(plus_two(3))
