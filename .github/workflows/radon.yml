@@ -1,0 +1,18 @@
+name: Radon
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  radon:
+    runs-on: ubuntu-latest
+    name: "radon"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: davidslusser/actions_python_radon@v1.0.0
+        with:
+          src: "."
+          grade: "B"
