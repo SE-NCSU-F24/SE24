@@ -6,4 +6,4 @@
 [![Autopep8](https://github.com/SE-NCSU-F24/SE24/actions/workflows/formatting.yml/badge.svg)](https://github.com/SE-NCSU-F24/SE24/actions/workflows/formatting.yml)
 [![Pylint](https://github.com/SE-NCSU-F24/SE24/actions/workflows/pylint.yml/badge.svg?branch=main)](https://github.com/SE-NCSU-F24/SE24/actions/workflows/pylint.yml)
 [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
-[![Radon](https://img.shields.io/badge/Average_Complexity-4.0-yellow?cacheSeconds=1209600)](https://radon.readthedocs.io/en/latest/index.html)
+[![Radon](https://github.com/SE-NCSU-F24/SE24/actions/workflows/radon.yml/badge.svg)](https://github.com/SE-NCSU-F24/SE24/actions/workflows/radon.yml)
