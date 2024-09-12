@@ -27,7 +27,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run tests
-      run: pytest --cov hw1 --cov-report=json
+      run: pytest --cov hw1 --cov hw2 --cov-report=json
 
     - name: Upload results to Codecov
       uses: codecov/codecov-action@v4
