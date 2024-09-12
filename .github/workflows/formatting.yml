@@ -14,7 +14,7 @@ jobs:
        id: autopep8
        uses: peter-evans/autopep8@v2
        with:
-         args: --recursive --diff --exit-code **/*.py
+         args: --recursive --diff --exit-code --aggressive --aggressive .
      - name: Fail if autopep8 made changes
        if: steps.autopep8.outputs.exit-code == 2
        run: exit 1
