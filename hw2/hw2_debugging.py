@@ -1,7 +1,7 @@
 """
 This code implements the Merge Sort algorithm.
 
-Functions: 
+Functions:
     - merge_sort(arr)
     - recombine(left_arr, right_arr)
 """
@@ -15,7 +15,7 @@ def merge_sort(arr):
     if len(arr) == 1:
         return arr
 
-    half = len(arr)//2
+    half = len(arr) // 2
 
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
 
