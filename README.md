@@ -4,6 +4,6 @@
 [![Pytest](https://github.com/SE-NCSU-F24/SE24/actions/workflows/python-app.yml/badge.svg)](https://github.com/SE-NCSU-F24/SE24/actions/workflows/python-app.yml)
 [![codecov](https://codecov.io/github/SE-NCSU-F24/SE24/graph/badge.svg?token=QRIBX6QEDX)](https://codecov.io/github/SE-NCSU-F24/SE24)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
+[![Pylint](https://github.com/SE-NCSU-F24/SE24/actions/workflows/pylint.yml/badge.svg?branch=main)](https://github.com/SE-NCSU-F24/SE24/actions/workflows/pylint.yml)
 [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
 [![Radon](https://img.shields.io/badge/Average_Complexity-4.0-yellow?cacheSeconds=1209600)](https://radon.readthedocs.io/en/latest/index.html)
