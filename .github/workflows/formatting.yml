@@ -1,0 +1,21 @@
+name: Autopep8
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  checkFormat:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v4
+     - name: autopep8
+       id: autopep8
+       uses: peter-evans/autopep8@v2
+       with:
+         args: --recursive --diff --exit-code --aggressive --aggressive .
+     - name: Fail if autopep8 made changes
+       if: steps.autopep8.outputs.exit-code == 2
+       run: exit 1
