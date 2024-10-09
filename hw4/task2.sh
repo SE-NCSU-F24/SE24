@@ -1,34 +1,11 @@
 #!/bin/bash
 
-empty=""
-removeTrailingSpace(){
-    trimmed=`echo "$1" | sed 's/^[[:space:]]*//g' | sed 's/[[:space:]]*$//g'`
-    if [ "$trimmed" = "$empty" ]; then
-        echo 0
-    else
-        echo $trimmed
-    fi
-}
+# Task a
+filteredFiles=`grep -r dataset1 -l -e "sample" | xargs -I {} bash -c 'count=$(grep "CSC510" {} -o | wc -l); [ "$count" -ge 3 ] && echo -n $count $(wc -c {}),' | sed 's/,$//g'`
 
-filteredFiles=""
-for file in dataset1/*; do
-    if [ -f $file ]; then
-        hasSample=`cat $file | grep "sample" -o | uniq -c | grep -E "\s+([0-9]+)" -o`
-        hasAtleastThreeStr=`cat $file | grep "CSC510" -o | uniq -c | grep -E "\s+([0-9]+)" -o`
-        fileSize=`wc -c $file`
-        hasSample=$(removeTrailingSpace $hasSample)
-        hasAtleastThreeStr=$(removeTrailingSpace $hasAtleastThreeStr)
-        fileSize=$(removeTrailingSpace $fileSize)
-        if [ $hasSample -gt 0 -a $hasAtleastThreeStr -gt 2 ]; then
-            info="$file $hasSample $hasAtleastThreeStr $fileSize"
-            info=$info$","
-            filteredFiles+=$info
-        fi
-    fi
-done
+# Task b
+filteredFiles=`echo $filteredFiles | gawk -f sort.awk`
 
-filteredFiles=`echo $filteredFiles | sed 's/,$//g' | gawk -f sort.awk`
-
-for file in $filteredFiles; do
-    echo `echo $file | sed 's/file/filtered/g'`
-done
+# Task c
+filteredFiles=`echo $filteredFiles | sed 's/file/filtered/g'`
+echo $filteredFiles | xargs -n1 echo
