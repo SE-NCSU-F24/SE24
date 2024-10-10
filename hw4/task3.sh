@@ -10,7 +10,7 @@ $3 == 2 && $NF ~ /S/ {
     if ($7 != "") {sum += $7; count++}
 }
 END {
-    if (count > 0) print "Average Age:", sum / count
+    if (count > 0) print "Average Age:" sum / count
     else print "No valid ages found."
 }' | \
 tee >(grep -v "Average Age:" > filtered_data.csv)
